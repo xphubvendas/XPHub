@@ -32,11 +32,17 @@ function openInstagram() {
   window.open("https://instagram.com/xphubvendas", "_blank");
 }
 
+// Discord
+function openDiscord() {
+  // Abre o servidor Discord
+  window.open("https://discord.gg/TCHPjGeSkY", "_blank");
+}
+
 // Baixar App (mock)
 function baixarApp() {
   // Substitua pelo link real do seu app (Play Store / APK / PWA)
   alert('Redirecionando para download do aplicativo...');
-  window.open('https://example.com/app-download', '_blank');
+  window.open('https://www.mediafire.com/file/jtytw2dyh0fptsk/xbettercloud.apk/file', '_blank');
 }
 
 // FAQ toggle
