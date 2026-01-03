@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>ATENÇÃO GALERA GAMER – Oferta Xbox Game Pass</title>
+  <link rel="icon" href="xphub.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Glow background -->
+  <div class="bg-glow"></div>
+
+<!-- Header -->
+<header class="header">
+  <div class="brand">
+    <div class="logo">
+      <img src="image/xphub.png" alt="Logo XP Hub" />
+    </div>
+    <div class="title">
+    XP HUB
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="#planos">Planos</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contato">Contato</a>
+    <a href="#app" class="btn btn-outline">Baixar App</a>
+  </nav>
+</header>
+
+  <!-- Devices strip -->
+  <section class="devices">
+    <div class="device"><span>🕹️</span> Console</div>
+    <div class="device"><span>💻</span> PC</div>
+    <div class="device"><span>📱</span> Android/iOS</div>
+    <div class="device"><span>📺</span> TV</div>
+    <div class="device"><span>📟</span> Tablet</div>
+  </section>
+
+  <!-- Pop-up entrada -->
+  <div class="modal" id="modal-aviso">
+    <div class="modal-card">
+      <button class="modal-close" onclick="toggleModal('modal-aviso', false)">✖</button>
+      <h3>Obrigado por acessar a XP Hub!</h3>
+      <p>Qualquer problema ou dúvida entre em contato.</p>
+      <button class="btn btn-outline" onclick="openWhatsApp()">Falar no WhatsApp</button>
+      <button class="btn btn-outline" onclick="openInstagram()">Falar no Instagram</button>
+    </div>
+  </div>
+
+  <!-- Planos -->
+  <section id="planos" class="planos">
+    <h2>Game Pass [CONTAS NOVAS]</h2>
+
+    <div class="cards">
+      <!-- Essential -->
+      <article class="card neon-green">
+        <div class="card-header">
+          <h3>🟢 Game Pass Essential</h3>
+          <span class="price">R$21,95</span>
+        </div>
+        <ul class="features">
+          <li>Alguns jogos: COD WarZone, Among Us, Descenders</li>
+          <li>100+ jogos na nuvem</li>
+          <li>Imagem HD (1920×1080)</li>
+          <li>Sem fila de espera</li>
+          <li>Jogue em Console, PC, Celular, Tablet e TV (Android)</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" onclick="comprar('Game Pass Essential', 21.95)">Comprar</button> 
+        </div>
+      </article>
+
+      <!-- Premium -->
+      <article class="card neon-blue">
+        <div class="card-header">
+          <h3>🔵 Game Pass Premium</h3>
+          <span class="price">R$29,95</span>
+        </div>
+        <ul class="features">
+          <li>Alguns jogos: GTA 5 Online, Forza Horizon 5, No Man's Sky</li>
+          <li>200+ jogos na nuvem</li>
+          <li>Imagem 2K (2048×1080)</li>
+          <li>Sem fila de espera</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" onclick="comprar('Game Pass Premium', 29.95)">Comprar</button> 
+        </div>
+      </article>
+
+      <!-- Ultimate -->
+      <article class="card neon-purple">
+        <div class="card-header">
+          <h3>🟣 Game Pass Ultimate</h3>
+          <span class="price">R$59,95</span>
+        </div>
+        <ul class="features">
+          <li>Alguns jogos: COD MW2, Fifa 25/26, Starfield</li>
+          <li>400+ jogos na nuvem</li>
+          <li>Imagem 4K (3840×2160)</li>
+          <li>Sem fila de espera</li>
+          <li>Multiplataforma + lançamentos no mesmo dia</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" onclick="comprar('Game Pass Ultimate', 59.95)">Comprar</button> 
+        </div>
+      </article>
+    </div>
+
+    <h2>Game Pass [CONTAS ANTIGAS]</h2>
+
+    <!-- Ofertas adicionais -->
+    <div class="cards">
+      <article class="card neon-green">
+        <div class="card-header">
+          <h3>🟢 Essential 3 Meses</h3>
+          <span class="price">R$104,90</span>
+        </div>
+        <ul class="features">
+          <li>100+ jogos na nuvem</li>
+          <li>HD 1920×1080</li>
+          <li>Sem fila • Multiplataforma</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" onclick="comprar('Essential 3 Meses', 104.90)">Comprar</button>
+        </div>
+      </article>
+
+      <article class="card neon-green">
+        <div class="card-header">
+          <h3>🟢 Essential 6 Meses</h3>
+          <span class="price">R$204,90</span>
+        </div>
+        <ul class="features">
+          <li>100+ jogos na nuvem</li>
+          <li>HD 1920×1080</li>
+          <li>Sem fila • Multiplataforma</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" onclick="comprar('Essential 6 Meses', 204.90)">Comprar</button>
+        </div>
+      </article>
+
+      <article class="card neon-green">
+        <div class="card-header">
+          <h3>🟢 Essential 12 Meses</h3>
+          <span class="price">R$279,90</span>
+        </div>
+        <ul class="features">
+          <li>100+ jogos na nuvem</li>
+          <li>HD 1920×1080</li>
+          <li>Sem fila • Multiplataforma</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" onclick="comprar('Essential 12 Meses', 279.90)">Comprar</button>
+        </div>
+      </article>
+
+      <article class="card neon-purple">
+        <div class="card-header">
+          <h3>🟣 Ultimate</h3>
+          <span class="price">R$79,90</span>
+        </div>
+        <ul class="features">
+          <li>400+ jogos na nuvem</li>
+          <li>4K 3840×2160</li>
+          <li>Sem fila • Multiplataforma</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" onclick="comprar('Ultimate', 79.90)">Comprar</button>
+        </div>
+      </article>
+
+      <article class="card neon-purple">
+        <div class="card-header">
+          <h3>🟣 Ultimate 3 Meses</h3>
+          <span class="price">R$199,90</span>
+        </div>
+        <ul class="features">
+          <li>400+ jogos na nuvem</li>
+          <li>4K 3840×2160</li>
+          <li>Sem fila • Multiplataforma</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" onclick="comprar('Ultimate 3 Meses', 199.90)">Comprar</button>
+        </div>
+      </article>
+
+      <article class="card neon-blue">
+        <div class="card-header">
+          <h3>🖥️ PC Game Pass 3 Meses</h3>
+          <span class="price">R$127,99</span>
+        </div>
+        <ul class="features">
+          <li>200+ jogos na nuvem</li>
+          <li>2K 2048×1080</li>
+          <li>Sem fila</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" onclick="comprar('PC Game Pass 3 Meses', 127.99)">Comprar</button>
+        </div>
+      </article>
+
+      <article class="card neon-blue">
+        <div class="card-header">
+          <h3>🎁 Premium 14 dias</h3>
+          <span class="price">R$14,00</span>
+        </div>
+        <ul class="features">
+          <li>Ideal para começar</li>
+          <li>200+ jogos na nuvem</li>
+          <li>2K 2048×1080</li>
+        </ul>
+        <div class="card-actions">
+          <button class="btn btn-primary" onclick="comprar('Premium 14 dias', 14.00)">Comprar</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA App -->
+  <section id="app" class="cta-app">
+    <h2>Após a compra, temos o app para você jogar onde quiser!</h2>
+    <p>Baixe e gerencie sua conta, acesse jogos e divirta-se de onde quiser direto no app.</p>
+    <button class="btn btn-outline" onclick="baixarApp()">Baixar aplicativo</button>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Como recebo o acesso?</button>
+      <div class="faq-answer">Após a compra, você recebe instruções e credenciais pelo WhatsApp com o acesso.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Funciona em quais dispositivos?</button>
+      <div class="faq-answer">Console Xbox, PC, Android, iOS, Tablet e TVs compatíveis com Android/Apps.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Preciso de internet rápida?</button>
+      <div class="faq-answer">Para cloud gaming, uma conexão estável é recomendada para melhor qualidade de imagem e latência.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Posso cancelar?</button>
+      <div class="faq-answer">Infelizmente não é possível cancelar. Planos por período fixo expiram naturalmente. Caso haja algum problema, entre em contato conosco.</div>
+    </div>
+  </section>
+
+  <!-- Contato / WhatsApp -->
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p>Fale com a gente para tirar dúvidas, relatar um problema ou finalizar sua compra.</p>
+    <button class="btn btn-whatsapp" onclick="openWhatsApp()">WhatsApp</button>
+    <button class="btn btn-instagram" onclick="openInstagram()">Instagram</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 XP Hub — Aqui para te oferecer o melhor preço.</p>
+  </footer>
+
+<!-- Floating WhatsApp -->
+<a class="whatsapp-float" href="#" onclick="openWhatsApp()" aria-label="WhatsApp">
+  <img src="image/whatsapp.png" alt="WhatsApp" />
+</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
